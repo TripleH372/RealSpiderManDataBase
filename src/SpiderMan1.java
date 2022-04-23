@@ -15,7 +15,8 @@ public class SpiderMan1 {
             Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance(); //Looked This up
             myConnection = DriverManager.getConnection(myURL);
             myStatement = myConnection.createStatement();
-            String myQuery1 = "CREATE TABLE SPIDERMAN"+"("+"ComicName varchar(25), IssueNumber integer, IssueDate varchar(25), IssueName integer, IssueValue integer, MintCondition varchar(5)"+")";
+            String myQuery1 = "CREATE TABLE SPIDERMAN"+"("+"ComicName varchar(25), IssueNumber integer, " +
+                    "IssueDate varchar(25), IssueName integer, IssueValue integer, MintCondition varchar(5)"+")";
             System.out.println("The Table is Created!");
             String firstRow = INSERT_SPIDERMAN_VALUES+"('Amazing SM', 89, '10/1/70','Doc Ock Lives','$6.50', 'NO')";
             myStatement.executeUpdate(firstRow);
